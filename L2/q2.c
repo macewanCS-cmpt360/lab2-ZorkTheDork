@@ -1,3 +1,11 @@
+/*
+  Yes, both the child and parent can access the file descriptor
+  returned by open().
+
+  The text file ends up corrupted in a way when the processes write 
+  concurrently.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -15,10 +23,10 @@ int main(int argc, char *argv[])
 		exit(1);
 	} else if (rc == 0) {
 		printf("Child: File Descriptor = %d\n", fd);
-		write(fd, "This is a test from the child in q2\n", 37);
+		write(fd, "This is a test from the child in q2\n", 39);
 	} else {
 		printf("Parent: File Descriptor = %d\n", fd);
-		write(fd, "This is a test from the parent in q2\n", 37);
+		write(fd, "This is a test from the parent in q2\n", 39);
 	}
 	return 0;
 }

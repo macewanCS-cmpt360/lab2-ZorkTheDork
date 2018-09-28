@@ -1,3 +1,10 @@
+/*The child will get a copy of the variable x.
+
+  Since the parent and child have their own copies of the 
+  variable x, x will be whatever value each process
+  changes it to.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

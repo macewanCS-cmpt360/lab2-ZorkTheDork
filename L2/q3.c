@@ -1,3 +1,8 @@
+/*
+  The easiest way to make the parent wait for the child without
+  calling wait() is by calling sleep().
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
