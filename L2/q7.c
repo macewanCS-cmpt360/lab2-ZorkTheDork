@@ -1,8 +1,7 @@
 /*
-  Nothing is printed when printf() is called after closing
-  STDOUT.
-*/
-
+ *othing is printed when printf() is called after closing
+ *STDOUT.
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

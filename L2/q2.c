@@ -1,11 +1,9 @@
 /*
-  Yes, both the child and parent can access the file descriptor
-  returned by open().
-
-  The text file ends up corrupted in a way when the processes write 
-  concurrently.
-*/
-
+ *Yes, both the child and parent can access the file descriptor.
+ *returned by open().
+ *The text file ends up corrupted in a way when the processes write
+ *concurrently.
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
